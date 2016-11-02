@@ -10,10 +10,25 @@ angular.module('app').service('lyricService', function($http, $q, $sce) {
       });
   };
 
-  this.getChart = function() {
+  this.getChart = function(country) {
     return $http({
       method: 'JSONP',
-      url:'https://api.musixmatch.com/ws/1.1/chart.artists.get?page=1&page_size=3&country=it&apikey=7ead25d4f072f70cc89e665e62afb765&format=jsonp&callback=JSON_CALLBACK'
+      url:'https://api.musixmatch.com/ws/1.1/chart.artists.get?page=1&page_size=50&country=' + country + '&apikey=7ead25d4f072f70cc89e665e62afb765&format=jsonp&callback=JSON_CALLBACK'
+      });
+  };
+
+  //Note that the f_has_lyrics command will filter for songs with available lyrics. 
+  this.getTracks = function(country) {
+    return $http({
+      method: 'JSONP',
+      url:'https://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=50&country=' + country + '&f_has_lyrics=1&apikey=7ead25d4f072f70cc89e665e62afb765&format=jsonp&callback=JSON_CALLBACK'
+      });
+  };
+
+  this.getLyrics = function(track) {
+    return $http({
+      method: 'JSONP',
+      url:'https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=' + track + '&apikey=7ead25d4f072f70cc89e665e62afb765&format=jsonp&callback=JSON_CALLBACK'
       });
   };
 

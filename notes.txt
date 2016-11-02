@@ -1,17 +1,39 @@
+
+
+MVP
+1. Three views (3 points)
+2. Tracks score
+3. Mobile responsive (2 points)
+4. Animations (2 points)
+  a. Drop down menu
+  b. correct answer bounces
+5. Rules page
+6. End text if you get 100% correct has rainbow directive.
+
+
 HTML
 1. Have to include copyright info on any page displaying lyrics.
+--See checklist, but track.lyrics.get will include lyrics_copyright
+2. Rainbow effect if you click the lyrics text
 
 API
 1. It is required to put the specific id for a song in order to get the lyrics.
 2. Tracking code, see track-lyrics-get documentation
 Ask user for which country they would like to play in, then get the 50 most popular artists in that country
---Specific options, since the api is limited to a certain number of countries. 
---See chart.artist.get
-Get three songs from each
-Quiz people about who plays what.
+--Specific options, since the api is limited to a certain number of countries.
+--See chart.artist.get or chart.tracks.get
+
+STRETCH GOALS
+1. Include images of album cover art (maybe do this for the possible answers)
+5. Opaque flag of country on hover in home screen
+6. Video background on home screen (different video for each load would be cool)
+-- See code Steven sent.
 
 
-Stretch Goals
-1. Use explicit flags to find songs with most swear words?
+BIG STRETCH
+4. Include translated versions of name somehow
+-- Maybe just do the whole Japanese version in Japanese as an easter egg
+3. You can sort artists by popularity. See https://developer.musixmatch.com/documentation/input-parameters for details. This could be used to change difficulties.
+2. Use explicit flags to find songs with most swear words?
 --Alternatively, write a jQuery function to do that, since the explicit flag only identifies yes/no, a song does or does not have explicit lyrics.
-2. You can sort artists by popularity. See https://developer.musixmatch.com/documentation/input-parameters for details. This could be used to change difficulties.
+7. Have 'streak game', where you simply go until you're wrong, try to get the high score
