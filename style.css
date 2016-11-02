@@ -1,0 +1,31 @@
+header {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aqua;
+}
+
+#score {
+  font-size: 2em;
+  margin-left: 3vw;
+}
+
+#nav-icon {
+  margin-right: 5vw;
+}
+
+.nav-menu {
+  /*display: none;*/
+}
+
+/*Very possible that aligning content with only align the ui-view, not the content within the ui-view*/
+main{
+  background-color: red;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
