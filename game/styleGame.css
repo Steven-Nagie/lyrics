@@ -1,0 +1,41 @@
+.question {
+  width: 90vw;
+  height: 50vh;
+  padding: 1em;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lyrics {
+  background-color: orange;
+  width: 90vw;
+  height: 30vh;
+  padding: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.answer-div {
+  width: 90vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.answers {
+  width: 20vw;
+  height: 8vh;
+  background-color: salmon;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: none;
+}

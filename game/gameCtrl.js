@@ -1,5 +1,7 @@
 angular.module('app').controller('gameCtrl', function($scope, lyricService) {
 
+  
+
   //   $scope.tracks = [];
   //   $scope.lyrics = 0;
   //

@@ -9,6 +9,7 @@ MVP
   b. correct answer bounces
 5. Rules page
 6. End text if you get 100% correct has rainbow directive.
+--Different end states need params to determine which message to show.
 
 
 HTML
@@ -28,6 +29,9 @@ STRETCH GOALS
 5. Opaque flag of country on hover in home screen
 6. Video background on home screen (different video for each load would be cool)
 -- See code Steven sent.
+7. Erase questions from tracks array as they are done so they don't repeat.
+8. Correct answer bounces when you click.
+-- Just write a jQuery function that does this, then invoke it in the correctAnswer function.
 
 
 BIG STRETCH

@@ -1,11 +1,51 @@
-angular.module('app').controller('mainCtrl', function($scope, lyricService) {
+angular.module('app').controller('mainCtrl', function($scope, $state, lyricService, scoreService) {
 
-  $scope.tracks = [];
-  $scope.lyrics = 0;
+  // These equations help with moving the game along with each correct or incorrect answer
+  function getRandoms() {
+    var randomTrack = $scope.getRandomTrack();
+    $scope.correctArtist = randomTrack.artist;
+    console.log(randomTrack);
+    $scope.randomArtist1 = $scope.getRandomTrack().artist;
+    $scope.randomArtist2 = $scope.getRandomTrack().artist;
+    $scope.getLyrics(randomTrack.trackId);
+  }
+
+  function eraseDuplicateQuesions() {
+    for (var i = 0; i < $scope.tracks.length; i++) {
+      if ($scope.tracks[i].lyricsId === $scope.lyrics.lyricsId) {
+        $scope.tracks.splice(i, 1);
+      }
+    }
+  }
+
+  // This variables are to keep count of how the user is progressing through the game.
+  $scope.score = 0;
+  $scope.totalQuestions = 0;
+  $scope.correctAnswer = function() {
+    scoreService.correctAnswer();
+    $scope.score = scoreService.score;
+    if ($scope.totalQuestions === 20) {
+      $state.go('end');
+    }
+    eraseDuplicateQuesions();
+    getRandoms();
+  };
+  $scope.incorrectAnswer = function() {
+    scoreService.incorrectAnswer();
+    $scope.score = scoreService.score;
+    if ($scope.totalQuestions === 20) {
+      $state.go('end');
+    }
+    eraseDuplicateQuestions();
+    getRandoms();
+  };
 
   $scope.getRandomTrack = function() {
-    return $scope.tracks[Math.floor(Math.random() * ($scope.tracks.length - 1))].trackId;
+    return $scope.tracks[Math.floor(Math.random() * ($scope.tracks.length - 1))];
   };
+
+
+
 
   // Searches for instances of the artist as credited to a song. This means that it includes collaborations with other artists.
   $scope.getArtist = function(artist) {
@@ -30,7 +70,12 @@ angular.module('app').controller('mainCtrl', function($scope, lyricService) {
       $scope.tracks = response;
       // console.log($scope.tracks);
     }).then(function() {
-      $scope.getLyrics($scope.getRandomTrack());
+      var randomTrack = $scope.getRandomTrack();
+      $scope.correctArtist = randomTrack.artist;
+      console.log(randomTrack);
+      $scope.randomArtist1 = $scope.getRandomTrack().artist;
+      $scope.randomArtist2 = $scope.getRandomTrack().artist;
+      $scope.getLyrics(randomTrack.trackId);
     });
   };
 

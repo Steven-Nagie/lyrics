@@ -15,14 +15,15 @@
   </head>
   <body ng-controller="mainCtrl">
     <header>
-      <h4 id="score">SCORE PLACEHOLDER</h4>
+      <h4 id="score">{{score}}</h4>
       <i class="fa fa-bars fa-4x" id='nav-icon'></i>
       <div class='nav-menu'>
         <a ui-sref='home'>Home</a>
-        <a ui-sref='game'>Game</a>
+        <a ui-sref='game' id="game-nav">Game</a>
         <a ui-sref='end'>End</a>
       </div>
     </header>
+
 
     <main>
       <ui-view><ui-view>
@@ -41,6 +42,7 @@
   <script src="./js/app.js"></script>
   <script src="./js/mainCtrl.js"></script>
   <script src="./js/lyricService.js"></script>
+  <script src="./js/scoreService.js"></script>
   <script src='./home/homeCtrl.js'></script>
   <script src="./game/gameCtrl.js"></script>
   <script src='./end/endCtrl.js'></script>
