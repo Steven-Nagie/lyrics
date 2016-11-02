@@ -1,0 +1,17 @@
+HTML
+1. Have to include copyright info on any page displaying lyrics.
+
+API
+1. It is required to put the specific id for a song in order to get the lyrics.
+2. Tracking code, see track-lyrics-get documentation
+Ask user for which country they would like to play in, then get the 50 most popular artists in that country
+--Specific options, since the api is limited to a certain number of countries. 
+--See chart.artist.get
+Get three songs from each
+Quiz people about who plays what.
+
+
+Stretch Goals
+1. Use explicit flags to find songs with most swear words?
+--Alternatively, write a jQuery function to do that, since the explicit flag only identifies yes/no, a song does or does not have explicit lyrics.
+2. You can sort artists by popularity. See https://developer.musixmatch.com/documentation/input-parameters for details. This could be used to change difficulties.
