@@ -1,12 +1,20 @@
-<p>{{message}}</p>
-<button class="home-button" ng-click="newGame('us')"><div id="us-div">United States</div></button>
-<button class="home-button" ng-click="newGame('ca')">Canada</button>
-<button class="home-button" ng-click="newGame('au')">Australia</button>
-<button class="home-button" ng-click="newGame('de')">Deutschland</button>
-<button class="home-button" ng-click="newGame('es')">España</button>
-<button class="home-button" ng-click="newGame('fi')">Suomi</button>
-<button class="home-button" ng-click="newGame('it')">Italia</button>
-<button class="home-button" ng-click="newGame('pt')">Portugal</button>
-<button class="home-button" ng-click="newGame('gb')">Great Britain</button>
-<button class="home-button" ng-click="newGame('gr')">Ελλάδα</button>
-<button class="home-button" ng-click="newGame('nl')">Nederland</button>
+<section class='home-screen'>
+
+    <!--Offset the words here and make them a big, curly font maybe-->
+    <h1>The Lyrics Game!</h1>
+    <p>Welcome to the Lyrics Game! Pick the country you'd like to play with, and check the rules section in the upper right menu for more information</p>
+    <div class="all-home-buttons">
+        <button class="home-button" ng-click="newGame('us')"><div class="inner-button-div" id="us-div" ng-mouseover="">United States</div></button>
+        <button class="home-button" ng-click="newGame('ca')">Canada</button>
+        <button class="home-button" ng-click="newGame('au')">Australia</button>
+        <button class="home-button" ng-click="newGame('de')">Deutschland</button>
+        <button class="home-button" ng-click="newGame('es')">España</button>
+        <button class="home-button" ng-click="newGame('fi')">Suomi</button>
+        <button class="home-button" ng-click="newGame('it')">Italia</button>
+        <button class="home-button" ng-click="newGame('pt')">Portugal</button>
+        <button class="home-button" ng-click="newGame('gb')">Great Britain</button>
+        <button class="home-button" ng-click="newGame('gr')">Ελλάδα</button>
+        <button class="home-button" ng-click="newGame('nl')">Nederland</button>
+    </div>
+
+</section>
