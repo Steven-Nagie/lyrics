@@ -1,0 +1,17 @@
+.home-button {
+  width: 15vw;
+  height: 8vh;
+  padding: 0;
+}
+
+#us-div {
+  visibility: hidden;
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+#us-div:hover {
+  background-color: red;
+}

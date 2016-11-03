@@ -10,7 +10,7 @@ angular.module('app', ['ui.router'])
       templateUrl: './game/game.html',
       controller: 'gameCtrl',
     }).state('end', {
-      url: '/end',
+      url: '/end/:id',
       templateUrl: './end/end.html',
       controller: 'endCtrl',
     });

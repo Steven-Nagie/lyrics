@@ -18,26 +18,46 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
     }
   }
 
+  function endIt() {
+    if ($scope.score >= 50) {
+    $state.go('end', {'id': 'great'});
+  } else if ($scope.score <= 37 && $scope.score > 0) {
+    $state.go('end', {'id': 'bad'});
+  } else if ($scope.score < 50 && $scope.score > 37){
+    $state.go('end', {'id': 'mediocre'});
+  } else {
+    $state.go('end', {'id': 'terrible'});
+  }
+  }
+
   // This variables are to keep count of how the user is progressing through the game.
   $scope.score = 0;
   $scope.totalQuestions = 0;
+
   $scope.correctAnswer = function() {
     scoreService.correctAnswer();
     $scope.score = scoreService.score;
-    if ($scope.totalQuestions === 20) {
-      $state.go('end');
+    $scope.totalQuestions++;
+    if ($scope.totalQuestions >= 10) {
+      endIt();
     }
     eraseDuplicateQuesions();
     getRandoms();
+    console.log($scope.totalQuestions);
+
   };
+
   $scope.incorrectAnswer = function() {
     scoreService.incorrectAnswer();
     $scope.score = scoreService.score;
-    if ($scope.totalQuestions === 20) {
-      $state.go('end');
+    $scope.totalQuestions++;
+    if ($scope.totalQuestions >= 10) {
+      endIt();
     }
-    eraseDuplicateQuestions();
+    eraseDuplicateQuesions();
     getRandoms();
+    console.log($scope.totalQuestions);
+
   };
 
   $scope.getRandomTrack = function() {
@@ -85,6 +105,11 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
       $scope.lyrics = response;
       console.log($scope.lyrics);
     });
+  };
+
+  $scope.newGame = function(country) {
+    $scope.getTracks(country);
+    $state.go('game');
   };
 
   // $scope.getArtist('Kendrick Lamar');

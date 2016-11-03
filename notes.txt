@@ -8,9 +8,10 @@ MVP
   a. Drop down menu
   b. correct answer bounces
 5. Rules page
+-- Transition to bigger size and slide to middle to get cool effect like it's appearing from out of the menu.
 6. End text if you get 100% correct has rainbow directive.
 --Different end states need params to determine which message to show.
-
+Supported country values are AU (australia), CA (canada), DE(deutschland), ES (españa), FI (Finland), IT (Italy), PT (Portugal), GB (Great Britain), GR (Greece), NL (Netherlands), US; defaults to US.
 
 HTML
 1. Have to include copyright info on any page displaying lyrics.
