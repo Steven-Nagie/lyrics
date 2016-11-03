@@ -14,6 +14,13 @@
 
   </head>
   <body ng-controller="mainCtrl">
+
+    <div class='video-background'>
+      <video loop muted autoplay poster='./images/blakey_snapshot.png' class='fullscreen-video'>
+        <source src="./images/blakey_cut.mp4" type="video/mp4">
+      </video>
+    </div>
+
     <header>
       <h4 id="score">{{score}}</h4>
       <i class="fa fa-bars fa-2x" id='nav-icon'></i>

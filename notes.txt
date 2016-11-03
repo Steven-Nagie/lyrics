@@ -33,6 +33,8 @@ STRETCH GOALS
 7. Erase questions from tracks array as they are done so they don't repeat.
 8. Correct answer bounces when you click.
 -- Just write a jQuery function that does this, then invoke it in the correctAnswer function.
+9. Timer
+-- Can choose different difficulties with different amounts of time.
 
 
 BIG STRETCH
