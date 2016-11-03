@@ -1,0 +1,18 @@
+h1 {
+  font-family: 'Bilbo Swash Caps', cursive;
+  font-size: 4em;
+  /*color: #C0C4BE;*/
+  /*color: #E4E5E4;*/
+  color: #E6E7E6;
+}
+
+p {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.5em;
+  color: #EEEFEE;
+}
+
+button {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bolder;
+}

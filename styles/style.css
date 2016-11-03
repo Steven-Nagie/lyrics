@@ -10,11 +10,12 @@ header {
 #score {
   font-size: 2em;
   margin-left: 3vw;
-  color: white;
+  color: #C6C7C6;
 }
 
 #nav-icon {
   margin-right: 5vw;
+  color: #C6C7C6;
 }
 
 .nav-menu {
@@ -55,6 +56,9 @@ body {
 @media (max-width: 767px) {
   .video-background {
     background-image: url('blakey_snapshot.png');
+    background-position: center;
+    background-size: cover;
+
   }
 
   .fullscreen-video {

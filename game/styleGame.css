@@ -2,7 +2,7 @@
   width: 90vw;
   height: 50vh;
   padding: 1em;
-  background-color: blue;
+  /*background-color: blue;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,7 +10,7 @@
 }
 
 .lyrics {
-  background-color: orange;
+  /*background-color: orange;*/
   width: 90vw;
   height: 30vh;
   padding: 1.5em;
@@ -31,7 +31,7 @@
 .answers {
   width: 20vw;
   height: 8vh;
-  background-color: salmon;
+  /*background-color: salmon;*/
   margin: auto;
   display: flex;
   justify-content: center;

@@ -1,1 +1,10 @@
+.end-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+#end-button {
+  margin-top: 5vh;
+}

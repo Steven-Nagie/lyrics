@@ -44,3 +44,6 @@ BIG STRETCH
 2. Use explicit flags to find songs with most swear words?
 --Alternatively, write a jQuery function to do that, since the explicit flag only identifies yes/no, a song does or does not have explicit lyrics.
 7. Have 'streak game', where you simply go until you're wrong, try to get the high score
+
+MOBILE RESPONSIVE
+1. Because mobile browsers will not automatically play video, the video is replaced with a static background when less than 767px wide. 
