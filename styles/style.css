@@ -150,7 +150,7 @@ button:focus {outline:0;}
 	    transform: translate(-50%, -50%);
 }
 
-@media (max-width: 767px) {
+@media handheld and (max-width: 767px) {
   .video-background {
     background-image: url('blakey_snapshot.png');
     background-position: center;
