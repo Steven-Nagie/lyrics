@@ -84,7 +84,7 @@ button:focus {outline:0;}
   position: absolute;
   margin-left: 91vw;
   margin-top: 11vh;
-  transition: all 2s ease;
+  transition: all 1.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,7 +126,7 @@ button:focus {outline:0;}
 }
 
 .video-background {
-  background-image: url('blakey_snapshot.png');
+  /*background-image: url('blakey_snapshot.png');*/
   position: fixed;
   top: 0;
   right: 0;
@@ -155,11 +155,10 @@ button:focus {outline:0;}
     background-image: url('blakey_snapshot.png');
     background-position: center;
     background-size: cover;
-
   }
 
   .fullscreen-video {
-    display: none;
+    display: none !important;
   }
 }
 
