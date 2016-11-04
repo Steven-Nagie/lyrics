@@ -1,0 +1,44 @@
+.video-background {
+  background-image: url('blakey_snapshot.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.fullscreen-video {
+  display: none !important;
+}
+
+
+/***FONTS***/
+h1 {
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1em;
+}
+
+div {
+  font-size: .75em;
+}
+
+#lyrics {
+  font-size: 1.5em;
+}
+
+/***BUTTONS***/
+
+.home-button {
+  width: 20vw !important;
+  height: 11vh;
+}
+
+.answers {
+  width: 30vw !important;
+  margin: 3vw !important;
+}
+
+/***DIV***/
+.lyrics {
+  margin-bottom: 5vh;
+}

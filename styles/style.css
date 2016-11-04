@@ -150,17 +150,7 @@ button:focus {outline:0;}
 	    transform: translate(-50%, -50%);
 }
 
-@media (max-device-width: 767px), (max-width: 767px) {
-  .video-background {
-    background-image: url('blakey_snapshot.png');
-    background-position: center;
-    background-size: cover;
-  }
 
-  .fullscreen-video {
-    display: none !important;
-  }
-}
 
 /*Very possible that aligning content with only align the ui-view, not the content within the ui-view*/
 main{

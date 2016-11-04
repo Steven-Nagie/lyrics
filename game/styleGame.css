@@ -2,7 +2,6 @@
   width: 90vw;
   min-height: 50vh;
   padding: 1em;
-  /*background-color: blue;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,7 +9,6 @@
 }
 
 .lyrics {
-  /*background-color: orange;*/
   width: 90vw;
   min-height: 30vh;
   padding: 1.5em;
@@ -22,7 +20,7 @@
 
 .answer-div {
   width: 90vw;
-  height: 10vh;
+  min-height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
