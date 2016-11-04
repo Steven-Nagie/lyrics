@@ -34,9 +34,14 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   $scope.score = 0;
   $scope.totalQuestions = 0;
 
+  $scope.reset = function() {
+    $scope.score = 0;
+    $scope.totalQuestions = 0;
+  };
+
   $scope.correctAnswer = function() {
-    scoreService.correctAnswer();
-    $scope.score = scoreService.score;
+    scoreService.answer();
+    $scope.score += 5;
     $scope.totalQuestions++;
     if ($scope.totalQuestions >= 10) {
       endIt();
@@ -48,8 +53,8 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   };
 
   $scope.incorrectAnswer = function() {
-    scoreService.incorrectAnswer();
-    $scope.score = scoreService.score;
+    scoreService.answer();
+    $scope.score -= 3;
     $scope.totalQuestions++;
     if ($scope.totalQuestions >= 10) {
       endIt();

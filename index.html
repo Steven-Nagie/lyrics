@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./end/styleEnd.css" media="screen" title="no title">
 
   </head>
-  <body ng-controller="mainCtrl">
+  <body ng-controller="mainCtrl" ng-cloak>
 
     <div class='video-background'>
       <!-- <video loop muted autoplay poster='./images/blakey_snapshot.png' class='fullscreen-video'>
@@ -35,11 +35,12 @@
           <a href="" ng-click="endIt()">End</a>
           <a href="" id='rules-link'>Rules</a>
         </div>
-    </div>
+      </div>
     </header>
 
     <div class="rules-container">
       <i class='fa fa-times fa-lg exit' aria-hidden='true'></i>
+      <p class="rules-text">Hello! Welcome to Steven Nagie's Lyrics Game, so called due to a lack of originality. Using the Musixmatch api, it is possible to pull out information about the most popular songs in any of the countries listed on the start page. Once you've selected a country, random samples from the 50 most popular songs in that country will be presented, and it's your job to match the lyrics to the artist who sang them. For every correct answer, your score will increase by <span style="color: green">5</span> points. For every INcorrect answer, the score decreases by <span style="color: red">3</span> points. There are ten questions per round. Good luck!</p>
     </div>
 
 

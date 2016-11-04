@@ -1,6 +1,6 @@
 .question {
   width: 90vw;
-  height: 50vh;
+  min-height: 50vh;
   padding: 1em;
   /*background-color: blue;*/
   display: flex;
@@ -12,7 +12,7 @@
 .lyrics {
   /*background-color: orange;*/
   width: 90vw;
-  height: 30vh;
+  min-height: 30vh;
   padding: 1.5em;
   display: flex;
   justify-content: center;
@@ -28,14 +28,24 @@
   justify-content: space-between;
 }
 
-.answers {
-  width: 20vw;
-  height: 8vh;
-  /*background-color: salmon;*/
+
+
+.answers{
+  width: 15vw;
+  min-height: 8vh;
+  padding: 0;
+  /*margin: .05em;*/
   margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-shadow: none;
+  background-color: #BFBFBF;
+  color: #EEEFEE;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+              10px 10px 15px rgba(0,0,0,0.5),
+              -1px -1px 30px rgba(0,0,0,0.2);
+}
+
+.answers:click {
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+              inset 5px 5px 8px rgba(0,0,0,.5);
 }

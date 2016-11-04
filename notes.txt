@@ -10,14 +10,16 @@ MVP
 5. Rules page
 -- Transition to bigger size and slide to middle to get cool effect like it's appearing from out of the menu.
 6. End text if you get 100% correct has rainbow directive.
---Different end states need params to determine which message to show.
-Supported country values are AU (australia), CA (canada), DE(deutschland), ES (españa), FI (Finland), IT (Italy), PT (Portugal), GB (Great Britain), GR (Greece), NL (Netherlands), US; defaults to US.
 7. Reset score on newGame;
+8. After game, score slides down to the center of the screen, timer stops, and message says "Your score is .... in .... time, {{message}}."
 
 HTML
 1. Have to include copyright info on any page displaying lyrics.
 --See checklist, but track.lyrics.get will include lyrics_copyright
 2. Rainbow effect if you click the lyrics text
+3. Work on shadow on rules container.
+
+
 
 API
 1. It is required to put the specific id for a song in order to get the lyrics.
@@ -28,10 +30,10 @@ Ask user for which country they would like to play in, then get the 50 most popu
 
 STRETCH GOALS
 1. Include images of album cover art (maybe do this for the possible answers)
-5. Opaque flag of country on hover in home screen
-6. Video background on home screen (different video for each load would be cool)
+5. Opaque flag of country on hover in home screen *DONE*
+6. Video background on home screen (different video for each load would be cool) *DONE*
 -- See code Steven sent.
-7. Erase questions from tracks array as they are done so they don't repeat.
+7. Erase questions from tracks array as they are done so they don't repeat. *DONE*
 8. Correct answer bounces when you click.
 -- Just write a jQuery function that does this, then invoke it in the correctAnswer function.
 9. Timer

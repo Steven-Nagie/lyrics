@@ -7,6 +7,19 @@ header {
   /*background-color: aqua;*/
 }
 
+body {
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+/*All buttons everywhere will have a pointer, and not have the annoying blue background when clicked.*/
+button {
+  cursor: pointer;
+}
+
+button:focus {outline:0;}
+
 #score {
   font-size: 2em;
   margin-left: 3vw;
@@ -52,7 +65,7 @@ header {
   margin-right: 2px;
   margin-left: 10px;
   color: #C6C7C6;
-  transition: all .5s;
+  transition: font-size .5s, visibility .1s;
   visibility: hidden;
 }
 
@@ -63,47 +76,53 @@ header {
 
 }
 
-/*body div:nth-child(3) {
-  visibility: hidden;
+.rules-container {
+  opacity: 0;
+  background-color: #EEEFEE;
+  height: 1vh;
+  width: 1vw;
   position: absolute;
-  top: 10vh;
-  right: 8vw;
-  transition: all 3s ease;
+  margin-left: 91vw;
+  margin-top: 11vh;
+  transition: all 2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+              10px 10px 15px rgba(0,0,0,0.5),
+              -1px -1px 30px rgba(0,0,0,0.2);
 }
 
 .rules-container-center {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: red;
-  width: 60vw;
+  opacity: 1;
+  background-color: #BFBFBF;
+  width: 62vw;
   height: 60vh;
-  transform: translate(-50%, -50%);
-}*/
+  margin-left: 19vw;
+  margin-top: 20vh;
+}
 
 .exit {
   position: absolute;
   right: 1vw;
   top: 1vh;
+  cursor: pointer;
 }
 
+.rules-text {
+  display: none;
+  opacity: 0;
+  font-size: 1px;
+  transition: all 2s ease;
+}
 
-/*#rules-link:click #rules-container {
+.rules-text-center {
   display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: red;
-  width: 60vw;
-  height: 60vh;
-  transform: translate(-50%, -50%);
-}*/
-
-body {
-  padding: 0;
-  border: none;
-  margin: 0;
+  opacity: 1;
+  font-size: 1.5em;
+  margin: 0 5vw;
 }
 
 .video-background {
@@ -152,9 +171,4 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/*All buttons everywhere will have a pointer */
-button {
-  cursor: pointer;
 }

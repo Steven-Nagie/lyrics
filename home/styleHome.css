@@ -26,10 +26,20 @@
   width: 15vw;
   height: 8vh;
   padding: 0;
-  margin: .05em;
+  /*margin: .05em;*/
+  margin: .2em;
   background-color: #BFBFBF;
   color: #EEEFEE;
   border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+              10px 10px 15px rgba(0,0,0,0.5),
+              -1px -1px 30px rgba(0,0,0,0.2);
+}
+
+.home-button:click {
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+              inset 5px 5px 8px rgba(0,0,0,.5);
 }
 
 .inner-button-div {
