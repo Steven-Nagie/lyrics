@@ -16,10 +16,11 @@
     <link rel="stylesheet" href="./styles/fonts.css" media="screen" title="no title">
 
     <!-- VIEW STYLES -->
-    <link rel="stylesheet" href="./styles/mobile.css" media="(max-device-width: 767px), (max-width: 767px)" title="no title">
     <link rel="stylesheet" href="./home/styleHome.css" media="screen" title="no title">
     <link rel="stylesheet" href="./game/styleGame.css" media="screen" title="no title">
     <link rel="stylesheet" href="./end/styleEnd.css" media="screen" title="no title">
+    <link rel="stylesheet" href="./styles/mobile.css" media="(max-device-width: 767px), (max-width: 767px)" title="no title">
+
 
   </head>
   <body ng-controller="mainCtrl" ng-cloak>
@@ -35,17 +36,17 @@
       <div id="menu-container">
         <i class="fa fa-bars fa-2x" id='nav-icon'></i>
         <div class='nav-menu'>
-          <a ui-sref='home' ng-click="reset()">Home</a>
-          <a ui-sref='game' id="game-nav">Game</a>
-          <a href="" ng-click="endIt()">End</a>
-          <a href="" id='rules-link'>Rules</a>
+          <a ui-sref='home' ng-click="reset()" rainbow>Home</a>
+          <a ui-sref='game' id="game-nav" rainbow>Game</a>
+          <a href="" ng-click="endIt()" rainbow>End</a>
+          <a href="" id='rules-link' rainbow>Rules</a>
         </div>
       </div>
     </header>
 
     <div class="rules-container">
       <i class='fa fa-times fa-lg exit' aria-hidden='true'></i>
-      <p class="rules-text">Hello! Welcome to Steven Nagie's Lyrics Game, so called due to a lack of originality. Using the Musixmatch api, it is possible to pull out information about the most popular songs in any of the countries listed on the start page. Once you've selected a country, random samples from the 50 most popular songs in that country will be presented, and it's your job to match the lyrics to the artist who sang them. For every correct answer, your score will increase by <span style="color: green">5</span> points. For every INcorrect answer, the score decreases by <span style="color: red">3</span> points. There are ten questions per round. Good luck!</p>
+      <p class="rules-text" rainbow>Hello! Welcome to Steven Nagie's Lyrics Game, so called due to a lack of originality. Using the Musixmatch api, it is possible to pull out information about the most popular songs in any of the countries listed on the start page. Once you've selected a country, random samples from the 50 most popular songs in that country will be presented, and it's your job to match the lyrics to the artist who sang them. For every correct answer, your score will increase by <span style="color: green">5</span> points. For every INcorrect answer, the score decreases by <span style="color: red">3</span> points. There are ten questions per round. Good luck!</p>
     </div>
 
 
@@ -72,4 +73,5 @@
   <script src="./game/gameCtrl.js"></script>
   <script src='./end/endCtrl.js'></script>
   <script src="./game/questionDirective.js"></script>
+  <script src="./js/rainbowDirective.js"></script>
 </html>

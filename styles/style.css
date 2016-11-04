@@ -4,7 +4,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /*background-color: aqua;*/
 }
 
 body {
@@ -16,6 +15,17 @@ body {
 /*All buttons everywhere will have a pointer, and not have the annoying blue background when clicked.*/
 button {
   cursor: pointer;
+  width: 15vw;
+  height: 8vh;
+  padding: 0;
+  /*margin: .05em;*/
+  margin: .2em;
+  background-color: #9D9D9D;
+  color: #EEEFEE;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+              10px 10px 15px rgba(0,0,0,0.5),
+              -1px -1px 30px rgba(0,0,0,0.2);
 }
 
 button:focus {outline:0;}
@@ -109,6 +119,7 @@ button:focus {outline:0;}
   right: 1vw;
   top: 1vh;
   cursor: pointer;
+  display: none;
 }
 
 .rules-text {
