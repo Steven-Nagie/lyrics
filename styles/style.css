@@ -16,11 +16,89 @@ header {
 #nav-icon {
   margin-right: 5vw;
   color: #C6C7C6;
+  cursor: pointer;
 }
 
 .nav-menu {
-  /*display: none;*/
+  position: absolute;
+  top: 7.3vh;
+  right: 4.8vw;
+  height: auto;
+  width: auto;
+  border-radius: 15%;
+  visibility: hidden;
+  background-color: transparent;
+  border: 2px solid #C6C7C6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: visible .5s, top .8s;
 }
+
+#menu-container:hover .nav-menu {
+  visibility: visible;
+  top: 7.8vh;
+}
+
+#menu-container:hover .nav-menu a {
+  visibility: visible;
+}
+
+
+.nav-menu a {
+  text-decoration: none;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin-right: 2px;
+  margin-left: 10px;
+  color: #C6C7C6;
+  transition: all .5s;
+  visibility: hidden;
+}
+
+.nav-menu a:hover {
+  /*background-color: #C6C7C6;*/
+  /*-webkit-text-fill-color: transparent;*/
+  font-size: 1.7em;
+
+}
+
+/*body div:nth-child(3) {
+  visibility: hidden;
+  position: absolute;
+  top: 10vh;
+  right: 8vw;
+  transition: all 3s ease;
+}
+
+.rules-container-center {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: red;
+  width: 60vw;
+  height: 60vh;
+  transform: translate(-50%, -50%);
+}*/
+
+.exit {
+  position: absolute;
+  right: 1vw;
+  top: 1vh;
+}
+
+
+/*#rules-link:click #rules-container {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: red;
+  width: 60vw;
+  height: 60vh;
+  transform: translate(-50%, -50%);
+}*/
 
 body {
   padding: 0;
@@ -29,7 +107,7 @@ body {
 }
 
 .video-background {
-  /*background-color: black;*/
+  background-image: url('blakey_snapshot.png');
   position: fixed;
   top: 0;
   right: 0;
@@ -74,4 +152,9 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*All buttons everywhere will have a pointer */
+button {
+  cursor: pointer;
 }

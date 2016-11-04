@@ -20,20 +20,27 @@
   <body ng-controller="mainCtrl">
 
     <div class='video-background'>
-      <video loop muted autoplay poster='./images/blakey_snapshot.png' class='fullscreen-video'>
+      <!-- <video loop muted autoplay poster='./images/blakey_snapshot.png' class='fullscreen-video'>
         <source src="./images/blakey_cut.mp4" type="video/mp4">
-      </video>
+      </video> -->
     </div>
 
     <header>
       <h4 id="score">{{score}}</h4>
-      <i class="fa fa-bars fa-2x" id='nav-icon'></i>
-      <div class='nav-menu'>
-        <a ui-sref='home'>Home</a>
-        <a ui-sref='game' id="game-nav">Game</a>
-        <a href="" ng-click="endIt()">End</a>
-      </div>
+      <div id="menu-container">
+        <i class="fa fa-bars fa-2x" id='nav-icon'></i>
+        <div class='nav-menu'>
+          <a ui-sref='home'>Home</a>
+          <a ui-sref='game' id="game-nav">Game</a>
+          <a href="" ng-click="endIt()">End</a>
+          <a href="" id='rules-link'>Rules</a>
+        </div>
+    </div>
     </header>
+
+    <div class="rules-container">
+      <i class='fa fa-times fa-lg exit' aria-hidden='true'></i>
+    </div>
 
 
     <main>

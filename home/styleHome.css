@@ -28,6 +28,7 @@
   padding: 0;
   margin: .05em;
   background-color: #BFBFBF;
+  color: #EEEFEE;
   border-radius: 15px;
 }
 
@@ -46,7 +47,7 @@
   opacity: 0.7;
   background-size: cover;
   background-position: center;
-  /*color: white;*/
+  color: #121212;
 }
 
 #ca-div:hover {
@@ -54,7 +55,7 @@
   opacity: 0.7;
   background-size: cover;
   background-position: center;
-  /*color: white;*/
+  color: #121212;
 }
 
 #fi-div:hover {
@@ -62,7 +63,7 @@
   opacity: 0.7;
   background-size: cover;
   background-position: center;
-  /*color: white;*/
+  color: #121212;
 }
 
 #de-div:hover {
@@ -70,7 +71,7 @@
   opacity: 0.7;
   background-size: cover;
   background-position: center;
-  /*color: white;*/
+  color: #121212;
 }
 
 #gr-div:hover {
@@ -78,7 +79,7 @@
   opacity: 0.7;
   background-size: cover;
   background-position: center;
-  /*color: white;*/
+  color: #121212;
 }
 
 #au-div:hover {
@@ -86,7 +87,7 @@
   opacity: 0.7;
   background-size: cover;
   background-position: center;
-  color: #EEEFEE;
+  color: #FDFDFD;
 }
 
 #es-div:hover {
@@ -94,7 +95,7 @@
   opacity: 0.7;
   background-size: cover;
   background-position: center;
-  /*color: white;*/
+  color: #121212;
 }
 
 #it-div:hover {
@@ -102,7 +103,7 @@
   opacity: 0.7;
   background-size: cover;
   background-position: center;
-  /*color: white;*/
+  color: #121212;
 }
 
 #pt-div:hover {
@@ -110,7 +111,7 @@
   opacity: 0.7;
   background-size: cover;
   background-position: center;
-  /*color: white;*/
+  color: #121212;
 }
 
 #gb-div:hover {
@@ -118,7 +119,7 @@
   opacity: 0.7;
   background-size: cover;
   background-position: center;
-  /*color: white;*/
+  color: #121212;
 }
 
 #nl-div:hover {
@@ -126,5 +127,5 @@
   opacity: 0.7;
   background-size: cover;
   background-position: center;
-  /*color: white;*/
+  color: #121212;
 }

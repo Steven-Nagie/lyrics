@@ -12,6 +12,7 @@ MVP
 6. End text if you get 100% correct has rainbow directive.
 --Different end states need params to determine which message to show.
 Supported country values are AU (australia), CA (canada), DE(deutschland), ES (españa), FI (Finland), IT (Italy), PT (Portugal), GB (Great Britain), GR (Greece), NL (Netherlands), US; defaults to US.
+7. Reset score on newGame;
 
 HTML
 1. Have to include copyright info on any page displaying lyrics.
@@ -35,6 +36,7 @@ STRETCH GOALS
 -- Just write a jQuery function that does this, then invoke it in the correctAnswer function.
 9. Timer
 -- Can choose different difficulties with different amounts of time.
+10. Make menu links change to transparent during hover.
 
 
 BIG STRETCH
@@ -46,4 +48,6 @@ BIG STRETCH
 7. Have 'streak game', where you simply go until you're wrong, try to get the high score
 
 MOBILE RESPONSIVE
-1. Because mobile browsers will not automatically play video, the video is replaced with a static background when less than 767px wide. 
+1. Because mobile browsers will not automatically play video, the video is replaced with a static background when less than 767px wide.
+
+Turned video off by commenting out the video tag in the HTML and putting a static background image in the css in .video-background.
