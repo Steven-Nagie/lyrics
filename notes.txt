@@ -1,4 +1,8 @@
-
+TIPS FROM STEVEN
+1. Opaque div for question to help set it off
+2. Cleaner buttons
+3. Animations for when you win or lose (green is good)
+4. Think of what other games involve. Excitement when you win, disappointment when you don't. 
 
 MVP
 1. Three views (3 points)
