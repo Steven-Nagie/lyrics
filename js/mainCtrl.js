@@ -1,7 +1,8 @@
-angular.module('app').controller('mainCtrl', function($scope, $state, lyricService, scoreService) {
+angular.module('app').controller('mainCtrl', function($scope, $state, lyricService, scoreService, rainbowService) {
 
   // Have to change scope, put it on service.
   $scope.rainbowTrue = false;
+
   // These equations help with moving the game along with each correct or incorrect answer
   function getRandoms() {
     var randomTrack = $scope.getRandomTrack();
@@ -22,6 +23,7 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
 
   function endIt() {
     if ($scope.score >= 50) {
+    $scope.rainbowTrue = true;
     $state.go('end', {'id': 'great'});
   } else if ($scope.score <= 37 && $scope.score > 0) {
     $state.go('end', {'id': 'bad'});
