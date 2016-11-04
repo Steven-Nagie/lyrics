@@ -77,7 +77,6 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
     lyricService.getArtist(artist).then(function(response) {
       // $scope.lyrics = response.data.message.body.artist_list[0].artist.artist_name;
       $scope.artist = response.data.message.body.artist_list;
-      console.log($scope.artist);
     });
   };
 
@@ -85,7 +84,6 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   $scope.getChart = function(country) {
     lyricService.getChart(country).then(function(response) {
       $scope.chart = response;
-      console.log($scope.chart);
     });
   };
 
@@ -97,7 +95,6 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
     }).then(function() {
       var randomTrack = $scope.getRandomTrack();
       $scope.correctArtist = randomTrack.artist;
-      console.log(randomTrack);
       $scope.randomArtist1 = $scope.getRandomTrack().artist;
       $scope.randomArtist2 = $scope.getRandomTrack().artist;
       $scope.getLyrics(randomTrack.trackId);
@@ -108,7 +105,6 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   $scope.getLyrics = function(trackId) {
     lyricService.getLyrics(trackId).then(function(response) {
       $scope.lyrics = response;
-      console.log($scope.lyrics);
     });
   };
 
