@@ -109,6 +109,8 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   $scope.getLyrics = function(trackId) {
     lyricService.getLyrics(trackId).then(function(response) {
       $scope.lyrics = response;
+    }).then(function() {
+      
     });
   };
 
@@ -121,7 +123,7 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   //
   // $scope.getChart('us');
   //
-  $scope.getTracks('us');
+  // $scope.getTracks('us');
   //
   // $scope.getLyrics($scope.getRandomTrack());
 
