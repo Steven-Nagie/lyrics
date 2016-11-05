@@ -4,7 +4,7 @@ angular.module('app').directive('rainbow', function() {
 
       if (scope.rainbowTrue === true) {
 
-        var words = element.text().split(' ');
+        setTimeout(function() {var words = element.text().split(' ');
 
         for (var i = Math.floor(Math.random() * (5 - 1)); i < words.length; i) {
           var random = scope.getRandomColor();
@@ -13,6 +13,7 @@ angular.module('app').directive('rainbow', function() {
         }
         words = words.join(" ");
         element.html(words);
+      }, 1000);
       }
     }
   };

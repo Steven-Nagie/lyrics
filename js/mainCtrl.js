@@ -109,19 +109,6 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   $scope.getLyrics = function(trackId) {
     lyricService.getLyrics(trackId).then(function(response) {
       $scope.lyrics = response;
-    }).then(function() {
-      if ($scope.rainbowTrue === true) {
-
-        var words = $scope.lyrics.lyrics.split(' ');
-
-        for (var j = Math.floor(Math.random() * (5 - 1)); j < words.length; j) {
-          var random = $scope.getRandomColor();
-          words[j] = "<span style='color:" + random + "'>" + words[j] +"</span>";
-          j += Math.floor(Math.random() * (5 - 1));
-        }
-        words = words.join(" ");
-        $scope.lyrics.lyrics = words;
-      }
     });
   };
 
