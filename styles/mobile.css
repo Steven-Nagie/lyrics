@@ -26,6 +26,11 @@ div {
   width: 70vw;
 }
 
+.question-score-div {
+  width: 70vw;
+  margin-left: 10vw;
+}
+
 #lyrics {
   font-size: 1.5em;
 }
@@ -49,6 +54,7 @@ div {
 
 .answers {
   width: 30vw !important;
+  overflow: hidden;
   margin: 3vw !important;
 }
 
