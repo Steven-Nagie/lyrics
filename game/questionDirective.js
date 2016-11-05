@@ -9,24 +9,24 @@ angular.module('app').directive('showQuestion', function () {
         answers.eq(target).before(answers.eq(target2));
       }
 
-    //   setTimeout(function() {if (scope.rainbowTrue === true) {
-    //
-    //     var words = element.text().split(' ');
-    //
-    //     for (var j = Math.floor(Math.random() * (5 - 1)); j < words.length; j) {
-    //       var random = scope.getRandomColor();
-    //       words[j] = "<span style='color:" + random + "'>" + words[j] +"</span>";
-    //       j += Math.floor(Math.random() * (5 - 1));
-    //     }
-    //     words = words.join(" ");
-    //     element.html(words);
-    //   }
-    //
-    // }, 2000);
-    //
-    // }
+      setTimeout(function() {if (scope.rainbowTrue === true) {
 
-  }
+        var words = scope.lyrics.lyrics.split(' ');
+
+        for (var j = Math.floor(Math.random() * (5 - 1)); j < words.length; j) {
+          var random = scope.getRandomColor();
+          words[j] = "<span style='color:" + random + "'>" + words[j] +"</span>";
+          j += Math.floor(Math.random() * (5 - 1));
+        }
+        words = words.join(" ");
+        scope.lyrics.lyrics = words;
+      }
+
+    }, 100);
+
+    }
+
+
 
   };
 

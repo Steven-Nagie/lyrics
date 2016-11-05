@@ -109,8 +109,6 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   $scope.getLyrics = function(trackId) {
     lyricService.getLyrics(trackId).then(function(response) {
       $scope.lyrics = response;
-    }).then(function() {
-      
     });
   };
 

@@ -8,7 +8,7 @@ angular.module('app', ['ui.router'])
     }).state('game', {
       url: '/game',
       templateUrl: './game/game.html',
-      controller: 'gameCtrl',
+      controller: 'mainCtrl',
     }).state('end', {
       url: '/end/:id',
       templateUrl: './end/end.html',
