@@ -1,7 +1,7 @@
 angular.module('app').controller('mainCtrl', function($scope, $state, lyricService, scoreService, rainbowService) {
 
   // Have to change scope, put it on service.
-  $scope.rainbowTrue = false;
+  $scope.rainbowTrue = true;
 
   // These equations help with moving the game along with each correct or incorrect answer
   function getRandoms() {
@@ -109,6 +109,19 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   $scope.getLyrics = function(trackId) {
     lyricService.getLyrics(trackId).then(function(response) {
       $scope.lyrics = response;
+    }).then(function() {
+      if ($scope.rainbowTrue === true) {
+
+        var words = $scope.lyrics.lyrics.split(' ');
+
+        for (var j = Math.floor(Math.random() * (5 - 1)); j < words.length; j) {
+          var random = $scope.getRandomColor();
+          words[j] = "<span style='color:" + random + "'>" + words[j] +"</span>";
+          j += Math.floor(Math.random() * (5 - 1));
+        }
+        words = words.join(" ");
+        $scope.lyrics.lyrics = words;
+      }
     });
   };
 
@@ -126,6 +139,8 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   // $scope.getLyrics($scope.getRandomTrack());
 
   // 12849595 = Kendrick id
+
+  $scope.getRandomColor = rainbowService.getRandomColor;
 
 
 });
