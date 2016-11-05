@@ -1,7 +1,7 @@
-angular.module('app').controller('gameCtrl', function($scope, lyricService) {
+angular.module('app').controller('gameCtrl', function($scope, lyricService, rainbowService) {
 
-  
 
+  $scope.rainbowify = rainbowService.rainbowify;
   //   $scope.tracks = [];
   //   $scope.lyrics = 0;
   //

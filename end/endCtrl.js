@@ -1,5 +1,6 @@
-angular.module('app').controller('endCtrl', function($scope, $stateParams) {
+angular.module('app').controller('endCtrl', function($scope, $stateParams, rainbowService) {
 
+  $scope.rainbowify = rainbowService.rainbowify;
 
   if ($stateParams.id === 'great') {
     $scope.message = "You're the best! Congratulations on your vast array of pop music knowledge! You wanna give it another go? There's a special surprise if you do!";

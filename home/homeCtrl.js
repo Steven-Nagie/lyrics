@@ -1,5 +1,5 @@
-angular.module('app').controller('homeCtrl', function($scope) {
+angular.module('app').controller('homeCtrl', function($scope, rainbowService) {
 
-  $scope.message="This is the home";
+  $scope.rainbowify = rainbowService.rainbowify;
 
 });
