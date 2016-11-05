@@ -5,8 +5,9 @@ TIPS FROM STEVEN
 4. Think of what other games involve. Excitement when you win, disappointment when you don't.
 5. Contrast fonts between question and answers.
 
-6. Attach a question counter.
-7. Make the score more obvious.
+For Monday:
+Decide on which css is better -> get opinions of others.
+Eliminate 'game' and 'end' links from menu in gh-pages version.
 
 **For whatever reason, it really doesn't like the rainbow directive whenever it's pulling stuff from a state. We may need to write in a directive, or edit the current rainbow directive, or simply remove it from the elements where there is a problem, namely the end message.
 
