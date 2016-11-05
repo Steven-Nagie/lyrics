@@ -1,7 +1,7 @@
 angular.module('app').controller('mainCtrl', function($scope, $state, lyricService, scoreService, rainbowService) {
 
   // Have to change scope, put it on service.
-  $scope.rainbowTrue = false;
+  $scope.rainbowTrue = true;
 
   // These equations help with moving the game along with each correct or incorrect answer
   function getRandoms() {
