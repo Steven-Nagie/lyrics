@@ -23,7 +23,7 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
 
   function endIt() {
     if ($scope.score >= 50) {
-    // $scope.rainbowTrue = true;
+    $scope.rainbowTrue = true;
     $state.go('end', {'id': 'great'});
   } else if ($scope.score <= 37 && $scope.score > 0) {
     $scope.rainbowTrue = false;
@@ -128,7 +128,7 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   //
   // $scope.getChart('us');
   //
-  $scope.getTracks('us');
+  // $scope.getTracks('us');
   //
   // $scope.getLyrics($scope.getRandomTrack());
 
