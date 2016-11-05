@@ -13,7 +13,7 @@ angular.module('app').directive('rainbow', function() {
         }
         words = words.join(" ");
         element.html(words);
-      }, 1000);
+      }, 10);
       }
     }
   };
