@@ -1,7 +1,7 @@
 angular.module('app').controller('mainCtrl', function($scope, $state, lyricService, scoreService, rainbowService) {
 
   // Have to change scope, put it on service.
-  $scope.rainbowTrue = true;
+  $scope.rainbowTrue = false;
 
   // These equations help with moving the game along with each correct or incorrect answer
   function getRandoms() {
@@ -23,13 +23,16 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
 
   function endIt() {
     if ($scope.score >= 50) {
-    $scope.rainbowTrue = true;
+    // $scope.rainbowTrue = true;
     $state.go('end', {'id': 'great'});
   } else if ($scope.score <= 37 && $scope.score > 0) {
+    $scope.rainbowTrue = false;
     $state.go('end', {'id': 'bad'});
   } else if ($scope.score < 50 && $scope.score > 37){
+    $scope.rainbowTrue = false;
     $state.go('end', {'id': 'mediocre'});
   } else {
+    $scope.rainbowTrue = false;
     $state.go('end', {'id': 'terrible'});
   }
   }
@@ -37,16 +40,19 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   // This variables are to keep count of how the user is progressing through the game.
   $scope.score = 0;
   $scope.totalQuestions = 0;
+  $scope.currentQuestion = 1;
 
   $scope.reset = function() {
     $scope.score = 0;
     $scope.totalQuestions = 0;
+    $scope.currentQuestion = 1;
   };
 
   $scope.correctAnswer = function() {
     scoreService.answer();
     $scope.score += 5;
     $scope.totalQuestions++;
+    $scope.currentQuestion++;
     if ($scope.totalQuestions >= 10) {
       endIt();
     }
@@ -60,6 +66,7 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
     scoreService.answer();
     $scope.score -= 3;
     $scope.totalQuestions++;
+    $scope.currentQuestion++;
     if ($scope.totalQuestions >= 10) {
       endIt();
     }

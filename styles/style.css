@@ -3,7 +3,7 @@ header {
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 body {
@@ -87,6 +87,7 @@ button:focus {outline:0;}
 }
 
 .rules-container {
+  z-index: 100;
   opacity: 0;
   background-color: #EEEFEE;
   height: 1vh;
