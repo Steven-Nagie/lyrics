@@ -18,9 +18,47 @@ p {
   font-size: 1em ;
 }
 
+button {
+  font-size: 1em;
+}
+
 div {
   font-size: .75em;
 }
+
+/***HOME***/
+
+#game-title-container {
+  background-color: transparent;
+  box-shadow: none;
+  width: 50vw;
+  height: 30vh;
+}
+
+#game-title {
+  align-self: flex-end;
+  color: #C0C4BE;
+}
+
+#intro-text {
+margin: 5vh auto 5vh auto;
+background-color: transparent;
+box-shadow: none;
+text-align: justify;
+width: 40vw;
+}
+
+#intro-text p {
+color: #EEEFEE;
+}
+
+.all-home-buttons {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+
+/***GAME***/
 
 .lyrics-container {
   width: 70vw;

@@ -108,7 +108,7 @@ button:focus {outline:0;}
 
 .rules-container-center {
   opacity: 1;
-  background-color: #BFBFBF;
+  background-color: #353535;
   width: 62vw;
   height: 60vh;
   margin-left: 19vw;
@@ -116,6 +116,7 @@ button:focus {outline:0;}
 }
 
 .exit {
+  color: #C0C4BE;
   position: absolute;
   right: 1vw;
   top: 1vh;
@@ -124,6 +125,7 @@ button:focus {outline:0;}
 }
 
 .rules-text {
+  color: #C0C4BE;
   display: none;
   opacity: 0;
   font-size: 1px;

@@ -23,7 +23,7 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
 
   function endIt() {
     if ($scope.score >= 50) {
-    // $scope.rainbowTrue = true;
+    $scope.rainbowTrue = true;
     $state.go('end', {'id': 'great'});
   } else if ($scope.score <= 37 && $scope.score > 0) {
     $scope.rainbowTrue = false;
@@ -49,6 +49,7 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   };
 
   $scope.correctAnswer = function() {
+    setTimeout(function() {
     scoreService.answer();
     $scope.score += 5;
     $scope.totalQuestions++;
@@ -59,10 +60,12 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
     eraseDuplicateQuesions();
     getRandoms();
     console.log($scope.totalQuestions);
+  }, 1800);
 
   };
 
   $scope.incorrectAnswer = function() {
+    setTimeout(function() {
     scoreService.answer();
     $scope.score -= 3;
     $scope.totalQuestions++;
@@ -73,7 +76,7 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
     eraseDuplicateQuesions();
     getRandoms();
     console.log($scope.totalQuestions);
-
+  }, 1300);
   };
 
   $scope.getRandomTrack = function() {
@@ -128,7 +131,7 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   //
   // $scope.getChart('us');
   //
-  $scope.getTracks('us');
+  // $scope.getTracks('us');
   //
   // $scope.getLyrics($scope.getRandomTrack());
 
