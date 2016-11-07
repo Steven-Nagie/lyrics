@@ -29,4 +29,9 @@ $(document).ready(function() {
     setTimeout(function() {$('#answer1').removeClass('bounce');}, 1800);
   });
 
+  $(document).on('click', '.incorrect-answer', function() {
+    $(this).addClass('lose');
+    setTimeout(function(){$('.incorrect-answer').removeClass('lose');}, 1200);
+  });
+
 });

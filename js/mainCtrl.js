@@ -65,6 +65,7 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   };
 
   $scope.incorrectAnswer = function() {
+    setTimeout(function() {
     scoreService.answer();
     $scope.score -= 3;
     $scope.totalQuestions++;
@@ -75,7 +76,7 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
     eraseDuplicateQuesions();
     getRandoms();
     console.log($scope.totalQuestions);
-
+  }, 1300);
   };
 
   $scope.getRandomTrack = function() {
