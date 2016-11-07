@@ -1,6 +1,7 @@
 angular.module('app').directive('rainbow', function() {
   return {
     link: function(scope, element, attrs) {
+      setTimeout(function() {
       function getRandomColor() {
         var letters = "0123456789ABCDEF";
         var color = '#';
@@ -9,7 +10,7 @@ angular.module('app').directive('rainbow', function() {
         }
         return color;
       }
-      
+
       if (scope.rainbowTrue === true) {
 
         var words = element.text().split(' ');
@@ -22,6 +23,7 @@ angular.module('app').directive('rainbow', function() {
         words = words.join(" ");
         element.html(words);
       }
+    }, 1000);
     }
   };
 });

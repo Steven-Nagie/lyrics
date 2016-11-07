@@ -14,6 +14,7 @@ body {
 
 /*All buttons everywhere will have a pointer, and not have the annoying blue background when clicked.*/
 button {
+  overflow: hidden;
   cursor: pointer;
   width: 15vw;
   height: 8vh;
