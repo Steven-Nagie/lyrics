@@ -15,8 +15,6 @@ Also, it doesn't currently work on the lyrics in the question.
 If we do the function to change rainbowTrue to true in the main control, it doesn't seem to do anything to the other pages. Could it simply be an issue of scope?
 
 
-Bigger font in the background of the buttons
-
 MVP
 1. Three views (3 points)
 2. Tracks score
