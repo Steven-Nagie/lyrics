@@ -24,4 +24,9 @@ $(document).ready(function() {
     $('.rules-text').removeClass('rules-text-center');
   });
 
+  $(document).on('click', '#answer1', function() {
+    $('#answer1').addClass('bounce');
+    setTimeout(function() {$('#answer1').removeClass('bounce');}, 1800);
+  });
+
 });

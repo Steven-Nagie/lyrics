@@ -1,0 +1,15 @@
+.bounce {
+  -webkit-animation: bounce .3s infinite alternate;
+  animation: bounce .3s infinite alternate;
+  -webkit-animation-iteration-count: 8;
+  animation-iteration-count: 8;
+  background-color: green;
+}
+
+@-webkit-keyframes bounce {
+  to { transform: scale(1.2); }
+}
+
+@keyframse bounce {
+  to { transform: scale(1.2); }
+}
