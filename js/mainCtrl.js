@@ -7,7 +7,6 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
   function getRandoms() {
     var randomTrack = $scope.getRandomTrack();
     $scope.correctArtist = randomTrack.artist;
-    console.log(randomTrack);
     $scope.randomArtist1 = $scope.getRandomTrack().artist;
     $scope.randomArtist2 = $scope.getRandomTrack().artist;
     $scope.getLyrics(randomTrack.trackId);
@@ -59,7 +58,6 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
     }
     eraseDuplicateQuesions();
     getRandoms();
-    console.log($scope.totalQuestions);
   }, 1800);
 
   };
@@ -75,7 +73,6 @@ angular.module('app').controller('mainCtrl', function($scope, $state, lyricServi
     }
     eraseDuplicateQuesions();
     getRandoms();
-    console.log($scope.totalQuestions);
   }, 1300);
   };
 

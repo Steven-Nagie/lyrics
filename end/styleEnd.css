@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.final-text {
+  font-size: 3em;
+}
+
 #end-button {
   margin-top: 5vh;
 }
